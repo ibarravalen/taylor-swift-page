@@ -1,0 +1,213 @@
+/* Estilos grales */
+/* Mobile */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    background-color: rgb(107, 6, 6);
+    width: 100%;
+}
+
+.logo {
+    align-self: center;
+    justify-self: center;
+    font-family: 'Didact Gothic', sans-serif ;
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(231, 209, 209) ;
+}
+
+span {
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(231, 209, 209);
+    font-style: italic;
+}
+
+span:hover {
+
+    color: white;
+
+}
+
+nav {
+    text-align:start;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+header {
+    text-align: start;
+    margin-left: 20px;
+    width: 100%;
+
+}
+
+.red {
+    background-color:rgb(208,181,162);
+    width: 100%;
+}
+
+.im1 {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    padding: 0px;
+    animation-duration: 2s;
+    animation-name: redani;
+    animation-iteration-count: 1;
+}
+
+.tt1 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+    color: rgb(107, 6, 6);
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.tt1:hover {
+    animation-name: tituloani;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+.im2 {
+    width: 200px;
+    transition: all 2s;
+}
+
+.im2:hover {
+    width: 250px;
+}
+
+.galeria {
+    padding: 20px;
+    margin: 0;
+}
+
+.tt2 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+    color: rgb(107, 6, 6);
+    text-align: center;
+}
+
+footer {
+
+    background-color: rgb(107, 6, 6);
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+    color: rgb(208,181,162);
+    text-align: center;
+
+
+}
+
+
+/* KEYFRAMES */
+
+
+@keyframes redani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tituloani {
+    from {
+        transform: translate(-400px);
+        opacity: 0;
+
+    }
+
+to { 
+    transform: translate(0);
+    opacity: 100;}
+}
+
+/* Flex */
+
+.galeria1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#galeria2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+
+/* Grids */
+#grid1 {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "red red red"
+    "lover lover lover"
+    "h2 h2 h2"
+    "merch merch merch"
+    "merch2 merch2 merch2"
+    "footer footer footer" ;
+    grid-template-rows: 50px 1800px 1100px 100px 300px 300px 50px;
+}
+
+.headergrid {
+    display: grid;
+    grid-template-areas:
+    "nav header header";
+    grid-template-rows: 1fr 3fr;
+
+}
+
+/* Areas grid */
+
+#header {
+    grid-area: header;
+}
+
+#red {
+    grid-area: red;
+}
+#lover {
+    grid-area: lover;
+}
+#h2 {
+    grid-area: h2;
+}
+#merch {
+    grid-area: merch;
+}
+#merch2 {
+    grid-area: merch2;
+}
+footer {
+    grid-area: footer;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+nav {
+    grid-area: nav;
+}
